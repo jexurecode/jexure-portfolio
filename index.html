@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Jexure – Software Developer & Tech Enthusiast</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Caveat:wght@500&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="assets/hero.jpg">
+<script>
+  // Use an explicit visitor choice when available; otherwise follow the device theme.
+  (() => {
+    try {
+      const saved = localStorage.getItem('jexure-theme');
+      const systemDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      document.documentElement.dataset.theme = saved === 'light' || saved === 'dark' ? saved : (systemDark ? 'dark' : 'light');
+    } catch (_) {
+      document.documentElement.dataset.theme = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+  })();
+</script>
+<link rel="stylesheet" href="style.css"></head><body>
+<canvas id="net"></canvas>
+<nav><div class="wrap"><a class="logo" href="#top" data-go="top">JE<b>X</b>URE</a>
+<div class="links" id="main-links" aria-label="Main navigation"><a href="#top" data-go="top" class="on">Home</a><a href="#about" data-go="about">About</a><a href="#skills" data-go="skills">Skills</a><a href="#projects" data-go="projects">Projects</a><a href="#contact" data-go="contact">Contact</a></div>
+<div class="right"><button class="ib menu-toggle" id="menu-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="main-links"><svg viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg></button><a class="ib" href="https://github.com/jexurecode" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile"><svg viewBox="0 0 24 24"><path d="M8.500 6 2 12l6.500 6 1.500-1.500L5 12l5-4.500zm7 0-1.500 1.500L19 12l-5 4.500 1.500 1.500L22 12z"/></svg></a>
+<button class="ib" id="th" aria-label="Toggle light and dark theme"><svg viewBox="0 0 24 24"><path d="M21 13.500A9 9 0 1 1 10.500 3a7 7 0 0 0 10.500 10.500z"/></svg></button></div></div></nav>
+<main id="top">
+<div class="wrap hero">
+<div><div class="eyebrow">WELCOME TO MY PORTFOLIO</div>
+<h1>JE<span>X</span>URE</h1>
+<p class="role">Software Developer &amp;<em><span id="ty"></span><i class="cur"></i></em></p>
+<p class="lead">I build modern web solutions, explore new technologies and turn ideas into real projects. Passionate about code, problem solving and the future of technology.</p>
+<div class="btns"><button class="btn p" data-go="projects">&lt;/&gt; View Projects</button><button class="btn" data-go="contact">✉ Contact Me</button></div>
+<div class="soc"><a class="ib" href="https://github.com/jexurecode" target="_blank" rel="noopener noreferrer" aria-label="Visit Jexure on GitHub"><svg viewBox="0 0 24 24"><path d="M12 .9a11.1 11.1 0 0 0-3.51 21.63c.55.1.76-.24.76-.54v-2.1c-3.1.67-3.76-1.32-3.76-1.32-.5-1.28-1.23-1.62-1.23-1.62-1.01-.69.08-.68.08-.68 1.12.08 1.71 1.15 1.71 1.15 1 1.7 2.62 1.21 3.26.92.1-.72.39-1.21.71-1.49-2.47-.28-5.07-1.24-5.07-5.5 0-1.22.44-2.21 1.15-2.99-.12-.28-.5-1.42.11-2.95 0 0 .94-.3 3.05 1.14a10.6 10.6 0 0 1 5.55 0c2.11-1.44 3.05-1.14 3.05-1.14.61 1.53.23 2.67.11 2.95.72.78 1.15 1.77 1.15 2.99 0 4.27-2.6 5.21-5.08 5.49.4.35.75 1.02.75 2.06v3.08c0 .3.2.65.76.54A11.1 11.1 0 0 0 12 .9z"/></svg></a><a class="ib" href="mailto:jexurecode@gmail.com" aria-label="Email Jexure"><svg viewBox="0 0 24 24"><path d="M3 5h18a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2zm9 7 8-5H4zM3 17h18V9l-9 5-9-5z"/></svg></a></div></div>
+<div class="photo"><div class="quote">Better<br>Code<br>Bigger<br>Dreams</div>
+<div class="frame" id="fr"><img src="assets/hero.jpg" alt="Jexure standing in front of a glowing data dashboard in a server room">
+<div class="float f1"><span class="dot"></span>Portfolio online<small><br>Built with HTML, CSS &amp; JS</small></div>
+<div class="float f2"><b>Always</b><small>learning &amp; improving</small></div>
+<div class="float f3"><b>&lt;/&gt;</b><small>building step by step</small></div></div></div>
+<div class="scroll" aria-hidden="true"></div></div>
+<div class="wrap stats">
+<div class="card stat rv"><b data-stat="projects">0</b><span>Projects &amp; concepts</span></div>
+<div class="card stat rv"><b data-stat="languages">0</b><span>Programming / web languages</span></div>
+<div class="card stat rv"><b data-stat="skills">0</b><span>Tools &amp; technologies</span></div>
+<div class="card stat rv"><b data-stat="learning">0</b><span>Currently learning</span></div></div>
+
+<section id="about"><div class="wrap about">
+<div class="rv"><img src="assets/hero-small.jpg" alt="Portrait of Jexure"></div>
+<div class="rv"><div class="eyebrow">ABOUT ME</div><h2>Who <span>I Am</span></h2>
+<p>I’m a passionate software developer with a strong interest in building useful and innovative digital solutions. I enjoy learning new technologies, solving challenging problems and turning ideas into real projects.</p>
+<p>Right now I’m focused on becoming a skilled developer and creating projects that make a positive impact. I also work on app prototypes and creative tech concepts.</p>
+<div class="info"><div class="card">Location<b>Tanzania</b></div><div class="card">Email<b>jexurecode@gmail.com</b></div></div></div></div></section>
+
+<section id="skills"><div class="wrap"><div class="eyebrow">MY SKILLS</div><h2>What I <span>work with</span></h2>
+<div class="tabs"><button class="tab on" data-f="all">All</button><button class="tab" data-f="web">Web</button><button class="tab" data-f="code">Languages</button><button class="tab" data-f="learn">Learning</button></div>
+<div class="sk" id="sk"></div></div></section>
+
+<section id="projects"><div class="wrap"><div class="eyebrow">PROJECTS</div><h2>Things I’ve <span>built</span></h2>
+<div class="tabs"><button class="tab on" data-p="all">All</button><button class="tab" data-p="app">Apps</button><button class="tab" data-p="web">Web</button></div>
+<div class="proj" id="pj"></div></div></section>
+
+<section><div class="wrap"><div class="eyebrow">JOURNEY</div><h2>My path <span>so far</span></h2>
+<div class="tl">
+<div class="card rv"><small>Start</small><h3>Learning the fundamentals</h3><p>Began with HTML and CSS, then moved on to JavaScript and C++.</p></div>
+<div class="card rv"><small>Next</small><h3>Building real projects</h3><p>Turned small experiments into prototypes, including mobile app concepts.</p></div>
+<div class="card rv"><small>Now</small><h3>Growing as a developer</h3><p>Exploring React, Git workflows and AI-powered tools.</p></div></div></div></section>
+
+<section id="contact"><div class="wrap"><div class="eyebrow">CONTACT</div><h2>Let’s <span>build something</span></h2>
+<div class="contact"><div class="card rv"><h3 style="margin-top:0">Say hello</h3><p style="color:var(--mut)">Have an idea, a project or a question? Send a message and I’ll reply as soon as I can.</p><p><span class="dot"></span>Available for new projects</p></div>
+<div class="rv"><label class="sr-only" for="nm">Your name</label><input id="nm" name="name" placeholder="Your name" autocomplete="name" required><label class="sr-only" for="em">Your email</label><input id="em" name="email" type="email" placeholder="Your email" autocomplete="email" required><label class="sr-only" for="ms">Your message</label><textarea id="ms" name="message" rows="4" placeholder="Your message" required></textarea><button class="btn p" id="send" type="button">Send message</button><p id="form-note" class="form-note" role="status" aria-live="polite">This opens your email app with the message filled in.</p></div></div></div></section>
+</main>
+<footer>© <span id="year">2026</span> JEXURE · Better code, bigger dreams</footer>
+<script src="data.js" defer></script><script src="script.js" defer></script></body></html>
